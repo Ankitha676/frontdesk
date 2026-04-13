@@ -8,20 +8,38 @@ class GTTCQA:
         self.tokenizer = BertTokenizer.from_pretrained(model_name)
         self.model = BertForQuestionAnswering.from_pretrained(model_name)
 
-        # Define the context here
+       # Define the context here
         self.context = """
-The Government Tool Room & Training Centre (GTTC) has centers in Hubli and Belagavi, Karnataka.
-
-Hubli GTTC offers specialized training in tool and die making, precision manufacturing, and related technical skills. It provides diploma and certificate courses such as CNC machining, CAD/CAM design, and advanced manufacturing techniques. Various programs include the COE PTC Hubli and COE Autodesk, with free and paid courses under the CMKKY, AITT SCP, and AITT TSP schemes. Paid courses include CNC programming, AutoCAD, AI, machine learning, and Python. Internship opportunities are available for both diploma and engineering students. The principal is Mr. Maruthi Bhajantri. For more details, contact 0836 2333159.
-
-Belagavi GTTC offers a diverse range of educational and training programs. It provides diploma courses in Tool and Die Making and Precision Manufacturing, with a 3-year study period and 1 year of practical training, totaling 4 years, and a fee of ₹27,500. Eligibility requires passing the 10th standard. The center also offers long-term vocational training in Tool Maker, Tool Room Machinist, and Tool and Die Technician, with durations of 1 to 2 years. Paid courses include CNC Programming & Operations, Mastercam, AutoCAD, Creo (Pro-E), SolidWorks, NX CAD, CATIA, and Autodesk Fusion 360, with fees ranging from ₹2,000 to ₹5,000. Internships are available for BE and Diploma students, and SAP courses are offered with a fee structure of ₹8,008 for certification and ₹7,000 for assessment. COE PTC and COE Smart City programs offer courses in SAP, 3D Printing, Robotics, and more, with a fee of ₹4,000. For more information, contact 0831-2950611 or email gttc_bgm@yahoo.com.
-"""
-        self.full_form = "Government Tool Room & Training Centre"
+        Karnataka is one of India's leading technology hubs, with Bengaluru being known as the Silicon Valley of India.
+        
+        The state has a strong ecosystem in Artificial Intelligence (AI), Machine Learning (ML), Internet of Things (IoT), Robotics, and Generative AI (GenAI). Many global tech companies, startups, and research institutions are based here, making it a major innovation center.
+        
+        Bengaluru hosts top organizations such as Infosys, Wipro, TCS, and numerous AI startups working on cutting-edge technologies like Agentic AI, autonomous systems, and intelligent automation. The city is also home to premier institutes like IISc Bangalore and IIIT Bangalore, which offer advanced research and training in AI, robotics, and data science.
+        
+        Popular learning areas in Karnataka include:
+        - Artificial Intelligence & Machine Learning
+        - Data Science & Analytics
+        - Internet of Things (IoT)
+        - Robotics & Automation
+        - Generative AI (LLMs, RAG, Agentic AI systems)
+        - Cloud Computing (AWS, GCP, Azure)
+        
+        Many institutes and platforms in Karnataka offer training programs, internships, and certifications in these domains. Courses typically include Python programming, deep learning, computer vision, NLP, and AI system design.
+        
+        The state government also supports tech innovation through initiatives like startup incubators, skill development programs, and smart city projects, encouraging students and professionals to build careers in emerging technologies.
+        
+        Bengaluru, Mysuru, and Hubballi-Dharwad are growing tech education centers with increasing opportunities in AI and software development.
+        
+        For anyone interested in technology careers, Karnataka offers strong opportunities in learning, internships, and industry exposure across AI, ML, robotics, and modern software development.
+        """
+        
+        self.full_form = "Karnataka Technology & AI Ecosystem"
+        
         self.location_info = {
-            "Hubli": "Gttc Hubli B-467 To B-474, Industrial Estate, Gokul Road, Hubli, Karnataka",
-            "Belagavi": "Industrial Estate, Udyambag, Belgaum 590008"
+            "Bengaluru": "Major tech hub with startups, MNCs, and AI research centers",
+            "Mysuru": "Growing IT and education hub with training institutes",
+            "Hubballi-Dharwad": "Emerging tech and startup ecosystem in North Karnataka"
         }
-
         # Attempt to load the model if it exists
         self.load_model()
 
